@@ -151,6 +151,10 @@ body{
     background-color: #c6d8a9;
     color: #38491b;
  }
+  
+ i{
+   color: #38491b;
+   }
  .footer div{
     display: flex;
     flex-direction: row;
@@ -179,29 +183,12 @@ body{
     padding: 10px;
  }
  
- /*--------------todavia en prueba----------*/
- /*.seg{
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
- }
- .insta {
-    background: url('imagenes/insta.png');
-    background-size: 90%;
-    background-repeat: no-repeat;
- }
- .face {
-    background: url('imagenes/face.png');
-    background-size: 90%;
-    background-repeat: no-repeat;
- }*/
- 
  .gridindex{
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns:1fr 1fr 1fr 1fr; /* Cantidad de colunas */
-    grid-template-rows: 105px 46px auto 80px 1fr 0.6fr 100px; /* Cant de filas */
+    grid-template-columns:1fr 1fr 1fr 1fr; 
+    grid-template-rows: 105px 46px auto 80px 1fr 0.6fr 100px; 
     
     grid-template-areas: 
     "logo logo ingresar ingresar"
