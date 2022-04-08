@@ -105,6 +105,11 @@ li a:hover:not(.active) {
    background-size: cover;
    background-repeat: no-repeat;
 }
+
+ /*transitions*/
+.lineas :hover{
+  transform: scale(1.15);
+}
 .banner{
    display: flex;
    flex-direction: row;
@@ -754,7 +759,9 @@ i{
 .catalogo div{
   margin: 15px;
 }
-
+.catalogo div :hover{
+   transform: scale(1.15);
+ }
 .gridprod{
   margin: 0;
   padding: 0;
