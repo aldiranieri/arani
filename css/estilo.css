@@ -1,66 +1,31 @@
-body{
+*{
+   padding: 0%;
+   margin: 0%;
+}
+#body{
    font-family: 'Rubik', sans-serif;
 }
 a{
   text-decoration: none; 
 }
-.menu {
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-   display: flex;
-   justify-content: flex-end;
-   gap: 1rem;
-   background-color: rgb(255, 255, 255);
-}
-.menu li{
-   display: inline-block;
-}
-li a, .prod1 {
-   display: inline-block;
+.h5 a{
+   font-size: medium; 
    color: #38491b;
-   text-align: center;
-   padding: 14px 16px;
-   text-decoration: none;
+   font-weight: normal;
+ }
+ .hola{
+ margin: 0%;
+ padding: 0%;
 }
-li a:hover, .prod:hover .prod1 {
-   background-color: burlywood;
-}
-li.prod {
-   display: inline-block;
-}
-.submenu {
-   display: none;
-   position: absolute;
-   background-color: #ffffff;
-   min-width: 160px;
-   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-   z-index: 1;
-}
-.submenu a{
-   color: #38491b;
-   padding: 12px 16px;
-   text-decoration: none;
-   display: block;
-   text-align: left;
-}
-.submenu a:hover {
-   background-color: burlywood;
-}
-.prod:hover .submenu {
-   display: block;
-}
-/*-------ACTIVAR EL BOTON DEL MOMENTO --------*/
-li a:hover:not(.active) {
-   background-color: burlywood;
-}
-.active {
-   background-color: #c9c9c9;
-}
+
 .carrusel{
    width: 100%;
-   height: 300px;
    justify-content: center;
+   margin: 0% 0% 2% 0%;
+}
+.car{
+  margin: 0%;
+  padding: 0%;
 }
 .lineas{
    display: flex;
@@ -129,8 +94,10 @@ li a:hover:not(.active) {
    align-items: center;
 }
 .banner div p,h4{
-   margin: 2% 0%;
+   margin: 2% 12%;
    padding: 0%;
+   display: flex;
+   justify-items: center;
 }
 .ban1{
    border-right: 0.5px solid black;
@@ -139,281 +106,200 @@ li a:hover:not(.active) {
 .ban3{
    border-left: 0.5px solid black;
 }
-#menufooter ul {
-   background-color:#c6d8a9;
-}
-.redes i{
-  color: #38491b;
-}
 
-.footer{
-   background-color: #c6d8a9;
-   color: #38491b;
-}
-.footer div{
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-   align-items: center;
-}
-
-.footer p{
-   background-color: #2b361a;
-   color: #ffffff;
-   display: flex;
-   align-content: flex-end;
-}
-
-.redes{
-   display: flex;
-   text-align: center;
-   flex-direction: row;
-   flex-wrap: wrap;
-}
-
-.redes div{
-   display: inline-block;
-   text-align: center;
-   margin: 10px;
-   padding: 10px;
-}
-
-.gridindex{
-   margin: 0;
-   padding: 0;
-   display: grid;
-   grid-template-columns:1fr 1fr 1fr 1fr; 
-   grid-template-rows: 105px 46px auto 80px 1fr 0.6fr 100px; 
-   
-   grid-template-areas: 
-   "logo logo ingresar ingresar"
-   "buscador buscador menu1 menu1"
-   "carrusel carrusel carrusel carrusel"
-   "cat cat cat cat"
-   "lin lin lin lin"
-   "ban ban ban ban"
-   "footer footer footer footer";
-}
-.contenedorlogo{
-   grid-area: logo;
-   background-color: #c6d8a9;
-   color: #38491b;
-}
 .logo{
    height: 105px;
+   width: auto;
    padding-left: 40px;
 }
-.ingresar{
-   grid-area: ingresar;    
-   display: flex;
-   justify-content: flex-end;
-   align-items: center;
-   padding-right: 10px;
-   background-color: #c6d8a9;
-}
-.ingresar a{
+.carro{
    color: #38491b;
 }
-.buscador{
-   grid-area: buscador;
-   align-self: center;
-   padding-left: 10px;
-   width: 300px;
+.nav1{
+   display: flex;
+   justify-content: flex-end;
 }
-.bus {
-   width: 100%;
-   box-sizing: border-box;
-   border: 0.2px solid rgb(66, 66, 66);
-   border-radius: 4px;
-   font-size: 15px;
-   background-image: url('imagenes/buscar.png');
-   background-size: 6%;
-   background-position: 9px 9px;
-   background-repeat: no-repeat;
-   padding: 9px 20px 9px 40px;
- }
-.menu1{
-   grid-area: menu1;
-   align-self: stretch;
-}
-.carrusel{
-   grid-area: carrusel;
-}
+
 .categoriasprincipales{
-   grid-area: cat;
-   background-color: #c6d8a9;
    color: #38491b;
    display: flex;
    align-items: center;
    justify-content: center;
    padding: 20px;
 }
-.lineas{
-   grid-area: lin;
-}
-.banner{
-   grid-area: ban;
-}
-.footer{
-   grid-area: footer;
-   align-self: center;
-}
+/*---------footer nuevo---------*/
 
+ .container-redes{
+    background-color: #38491b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .botones{
+  min-width: 700px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ height: 80px;
+ }
+ .botones a{
+   text-decoration: none;
+   font-size: 28px;
+   width: 50px;
+   height: 50px;
+   line-height: 50px;
+   text-align: center;
+   background-color: #c6d8a9;
+   color: #38491b;
+   }
+ .container-body{
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+ }
+ .columna1{
+    max-width: 400px;
+ }
+ .columna1 h1{
+    font-size: 22px;
+ }
+ .columna1 p{
+    font-size: 14px;
+ }
+ .columna2{
+    max-width: 400px;
+ }
+ .columna2 h1{
+    font-size: 22px;
+ }
+ .columna2 p{
+    font-size: 14px;
+ }
+ .columna3{
+    max-width: 400px;
+ }
+ .columna3 h1{
+    font-size: 22px;
+ }
+ .columna3 p{
+    font-size: 14px;
+ }
+ .container-footer{
+    width: 100%;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 50px 0% 0%;
+    font-size: 13px;
+ }
+ .navfooter li a {
+    text-decoration: none;
+    color: grey;
+ }
+ .navfooter{
+    background-color: beige;
+ }
+ .solo500px{
+   display: none;
+}
+.menuoff{
+   display: none;
+}
+.navmenu{
+   padding: 0% 2%;
+}
+ 
 /*------------media queris*-------------*/
 @media screen and (max-width: 768px){
-  .buscador{
-     width: 150px;
-  }
-  .bus {
-  background-size: 10%;
-  }
- .menu {
-     font-size: 16px;
-     gap: 0.05rem;
- }
+
  .banner div {
      font-size: 14px;
      height: 4rem;
-     width: 200px;
+     width: 250px;
      margin: 3px;
      padding: 2px;
   }
-  .footer {
-     font-size: 12px; 
-  }
-  .redes{
-     margin: 2px;
-     padding: 1px;
-  }
-  #menufooter{
-     display: none;
-  }
-
-  .gridindex{
-    display: grid;
-    grid-template-columns:1fr 1fr 1fr 1fr; 
-    grid-template-rows: 105px 46px auto 80px 1fr 150px 100px; 
-    grid-template-areas: 
-    "logo logo ingresar ingresar"
-    "buscador menu1 menu1 menu1"
-    "carrusel carrusel carrusel carrusel"
-    "cat cat cat cat"
-    "lin lin lin lin"
-    "ban ban ban ban"
-    "footer footer footer footer";
- }
-  .carrusel{
-      width: 100%;
-      height: 200px;
+  .container-redes{
+   display: flex;
+   align-items: center;
+   justify-items: center;
+   flex-wrap: wrap;
+   margin: 0%;
+   padding: 0;
    }
-   .categoriasprincipales{
-      font-size: 20px;
+   .container-body{
+      flex-wrap: wrap;
+   }
+   .columna1{
+      max-width: 100%;
+   }
+   .columna2, .columna3{
+      padding-top: 20px;
+   }
+   .menuoff{
+      display: flex;
+   }
+   .banner{
+      font-size: small;
    }
 }
 
 @media screen and (max-width: 500px){
 
-  .gridindex{
-    display: grid;
-    grid-template-columns:155px 1fr; 
-    grid-template-rows: 105px 60px 46px auto 70px 1fr 140px 100px; 
-    grid-template-areas: 
-    "logo logo"
-    "buscador ingresar"
-    "menu1 menu1"
-    "carrusel  carrusel"
-    "cat cat"
-    "lin lin"
-    "ban ban"
-    "footer footer";
- }
- .buscador{
-  background-size: 10%;
-  padding: 22px 20px 9px 100px;
-  margin: 0px 0px 0px 28px;
-  }
-  .bus {
-   display: none;
-  }
-  .ingresar{   
-   background-color: white;
-   font-size: 14px;
-   }
-   .logo{
-   width: 50%;
-   margin: 0%;
-   padding: 0%;
-  }
-  .contenedorlogo{
-  display: flex;
-  justify-content: center;
-  }
-  .menu {
-    font-size: 14px;
-    gap: 0.05rem;
-   }
-  .carrusel{
-    width: 100%;
-    height: 100%;
-   }
-   .lineas{
-      font-size: 15px;
-   }
-   .categoriasprincipales{
-      font-size: 16px;
-   }
-  .banner div {
-    font-size: 12px;
-    height: 1rem;
-    width: 84px;
-    margin: 3px;
-    padding: 1rem;
-   }
-   .banner div p{
+   .ingreso500px{
       display: none;
    }
-   .footer {
-      font-size: 13px;
+   .solo500px{
+   display: flex;
+   align-content: center;
+   justify-content: center;
    }
-   #menufooter{
-    display: none;
+   .verde{
+   background-color: #c6d8a9;
    }
-
+   .logo{
+      padding: 0%;
+      margin: 0%;
+   }
+   .banner{
+      font-size: 12px;
+   }
+   .botones{
+      height: 80px;
+      min-width: 350px;
+   }
+   .botones a{
+      font-size: 20px;
+      width: 42px;
+      height: 42px;
+      line-height: 42px;
+     }
+     .banner div {
+      height: 1rem;
+      width: 110px;
+      margin: 1px;
+      padding: 1rem;
+      text-align: center;
+     }
+     .banner div h6{
+      font-size: 12px;
+   }
+     .banner div p{
+        display: none;
+     }
 }
 
 /*------------------------QUIENES SOMOS -----------------------*/
-.gridqs{
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns:1fr 1fr 1fr 1fr; 
-  grid-template-rows: 105px 46px 120px 300px 300px 0.6fr 100px;
-  
-  grid-template-areas: 
-  "logo logo ingresar ingresar"
-  "buscador buscador menu1 menu1"
-  "in in in in"
-  "tex1 tex1 tex1 tex1"
-  "tex2 tex2 tex2 tex2"
-  "ban ban ban ban"
-  "footer footer footer footer";
+
+.volverinicio nav ol,h3{
+   display: flex;
+   justify-content: center;
+   color: #38491b;
 }
-.bus {
-    background-image: url('../imagenes/buscar.png');
- }
-.volverinicio{
-  grid-area: in;
-  margin: 0%;
-  padding: 0%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.volverinicio ul{
-  display: flex;
-  flex-direction: row;
-  list-style: none;
+ .volverinicio nav {
+   margin: 2%;
 }
 .qs{
   margin: 0%;
@@ -427,7 +313,6 @@ li a:hover:not(.active) {
   float: right;
   margin:10px;
 }
-
 .foto2{
   float: left;
   margin:10px;
@@ -439,22 +324,6 @@ li a:hover:not(.active) {
 
 /*------------media queris*-------------*/
 @media screen and (max-width: 768px){
-
-  .gridqs{
-     display: grid;
-     grid-template-columns:1fr 1fr 1fr 1fr; 
-     grid-template-rows: 105px 46px auto 2.2fr 2.2fr 0.6fr 100px;
-
-     grid-template-areas: 
-     "logo logo ingresar ingresar"
-     "buscador menu1 menu1 menu1"
-     "in in in in"
-     "tex1 tex1 tex1 tex1"
-     "tex2 tex2 tex2 tex2"
-     "ban ban ban ban"
-     "footer footer footer footer";
-  }
-
   .qs{
      font-size: 18px;
   }
@@ -478,57 +347,6 @@ li a:hover:not(.active) {
 
 @media screen and (max-width: 500px){
 
-  .gridqs{
-     display: grid;
-     grid-template-columns:155px 1fr; 
-     grid-template-rows: 105px 60px 46px auto 2fr 2fr 140px 100px; 
-     grid-template-areas: 
-     "logo logo"
-     "buscador ingresar"
-     "menu1 menu1"
-     "in in"
-     "tex1 tex1"
-     "tex2 tex2"
-     "ban ban"
-     "footer footer";
-  }
- .buscador{
-  background-image: url('../imagenes/buscar.png');
-  background-size: 10%;
-  background-repeat: no-repeat;
-  padding: 22px 20px 9px 100px;
-  margin: 0px 0px 0px 28px;
-  }
-  .bus {
-   display: none;
-  }
-  .ingresar{   
-   background-color: white;
-   font-size: 14px;
-   }
-   .logo{
-   width: 50%;
-   margin: 0%;
-   padding: 0%;
-  }
-  .contenedorlogo{
-  display: flex;
-  justify-content: center;
-  }
-  .menu {
-    font-size: 14px;
-    gap: 0.05rem;
-   }
-  .banner div {
-    font-size: 12px;
-    height: 1rem;
-    width: 84px;
-    margin: 3px;
-    padding: 1rem;
-   }
-   .banner div p{
-      display: none;
-   }
    .footer {
       font-size: 13px;
    }
@@ -558,85 +376,17 @@ li a:hover:not(.active) {
 
 /*------------------------faq -----------------------*/
 
-.preguntas li{
-  border-top: 0.1px solid rgb(45, 68, 43);
-  font-weight: bolder;
-  padding-top: 20px;
-}
-.gridfaq{
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns:1fr 1fr 1fr 1fr; 
-  grid-template-rows: 105px 46px auto 500px 0.6fr 100px; 
-  
-  grid-template-areas: 
-  "logo logo ingresar ingresar"
-  "buscador buscador menu1 menu1"
-  "in in in in"
-  "preg preg preg preg"
-  "ban ban ban ban"
-  "footer footer footer footer";
-}
-.preguntas{
-  grid-area: preg;
-  justify-self: center;
-  align-self: center;
-}
-/*------------media queris*-------------*/
-@media screen and (max-width: 768px){
-
-  .gridfaq{
-     display: grid;
-     grid-template-columns:1fr 1fr 1fr 1fr; 
-     grid-template-rows: 105px 46px auto 2.2fr 0.6fr 100px;
-
-     grid-template-areas: 
-     "logo logo ingresar ingresar"
-     "buscador menu1 menu1 menu1"
-     "in in in in"
-     "preg preg preg preg"
-     "ban ban ban ban"
-     "footer footer footer footer";
-  }
-}
-
-@media screen and (max-width: 500px){
-
-  .gridfaq{
-     display: grid;
-     grid-template-columns:155px 1fr; 
-     grid-template-rows: 105px 60px 46px auto 2fr 140px 100px; 
-     grid-template-areas: 
-     "logo logo"
-     "buscador ingresar"
-     "menu1 menu1"
-     "in in"
-     "preg preg"
-     "ban ban"
-     "footer footer";
-  }
-  .preguntas{
-     font-size: 13px;
-     margin: 6%;
-  }
-}
 
 /*------------------------Contactos -----------------------*/
-.gridcon{
+.formulario{
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns:1fr 1fr 1fr 1fr; 
-  grid-template-rows: 105px 46px 120px 500px 0.6fr 100px;
-  
+  grid-template-rows: 40rem ;
+
   grid-template-areas: 
-  "logo logo ingresar ingresar"
-  "buscador buscador menu1 menu1"
-  "in in in in"
   "consultas consultas consultas con"
-  "ban ban ban ban"
-  "footer footer footer footer";
 }
 .contact-form{
   grid-area: consultas;
@@ -700,27 +450,23 @@ li a:hover:not(.active) {
 
 @media screen and (max-width: 768px){
 
-  .gridcon{
-     display: grid;
-     grid-template-columns:1fr 1fr 1fr 1fr; 
-     grid-template-rows: 105px 46px 120px 500px 250px 0.6fr 100px;
-     
-     grid-template-areas: 
-     "logo logo ingresar ingresar"
-     "buscador buscador menu1 menu1"
-     "in in in in"
-     "consultas consultas consultas consultas"
-     "con con con con"
-     "ban ban ban ban"
-     "footer footer footer footer";
-  }
+  .formulario{
+  display: flex;
+  margin: 0%;
+  padding: 0%;
+  flex-wrap: wrap;
+}
+.contact-info h4 {
+   padding: 0% 0% 0% 140px;
+   }
   .contact-info h4, .contact-info ul, .contact-info p {
   text-align: center;
   margin: 0 0 1rem 0;
   }
-  .contact-form {
+ .contact-form {
      margin: 0% 5%;
      padding: 0%;
+     width: 100%;
   }
   .contact-info {
      margin: 0% 5%;
@@ -728,109 +474,29 @@ li a:hover:not(.active) {
   }
 }
 @media screen and (max-width: 500px){
-
-  .gridcon{
-     display: grid;
-     grid-template-columns:155px 1fr; 
-     grid-template-rows: 105px 60px 46px auto 2fr 1fr 140px 100px; 
-     grid-template-areas: 
-     "logo logo"
-     "buscador ingresar"
-     "menu1 menu1"
-     "in in"
-     "consultas consultas"
-     "con con"
-     "ban ban"
-     "footer footer";
-  }
   .contact-info{
      font-size: 14px;
   }
   .volverinicio {
      margin: 0% 0% 2% 0%;
   }
+  .contact-info h4 {
+   padding: 0% ;
+   }
 }
 
 /*------------------------productos -----------------------*/
 .catalogo div img{
-  height: 280px;
-  width: 220px;
+  height: 20rem;
+  width: 15rem;
 }
 .catalogo div{
-  margin: 15px;
-}
-.catalogo div :hover{
-   transform: scale(1.15);
- }
-.gridprod{
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns:1fr 1fr 1fr 1fr; 
-  grid-template-rows: 105px 46px 120px 5fr 0.6fr 100px;
-  
-  grid-template-areas: 
-  "logo logo ingresar ingresar"
-  "buscador buscador menu1 menu1"
-  "in in in in"
-  "cata cata cata cata"
-  "ban ban ban ban"
-  "footer footer footer footer";
+  margin: 1%;
 }
 .catalogo{
- grid-area: cata;
  display: flex;
  flex-wrap: wrap;
  justify-content: center;
 }
 
-/*------------media queris*-------------*/
-@media screen and (max-width: 768px){
 
-  .gridprod{
-     display: grid;
-     grid-template-columns:1fr 1fr 1fr 1fr; 
-     grid-template-rows: 105px 46px auto 5fr 0.6fr 100px;
-
-     grid-template-areas: 
-     "logo logo ingresar ingresar"
-     "buscador menu1 menu1 menu1"
-     "in in in in"
-     "cata cata cata cata"
-     "ban ban ban ban"
-     "footer footer footer footer";
-  }
-  .catalogo div img{
-     height: 250px;
-     width: 190px;
-  }
-  .catalogo div{
-     margin: 13px;
-  }
-}
-
-@media screen and (max-width: 500px){
-
-  .gridprod{
-     display: grid;
-     grid-template-columns:155px 1fr; 
-     grid-template-rows: 105px 60px 46px auto 6fr 140px 100px; 
-     grid-template-areas: 
-     "logo logo"
-     "buscador ingresar"
-     "menu1 menu1"
-     "in in"
-     "cata cata"
-     "ban ban"
-     "footer footer";
-  }
-  .catalogo div img{
-     height: 230px;
-     width: 170px;
-  }
-  .catalogo div{
-     margin: 12px;
-     font-size: 12px;
-  }
-}
-  

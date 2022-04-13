@@ -5,67 +5,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quienes somos</title>
+    <title>Contacto</title>
 
     <link rel="shortcut icon" href="../imagenes/arani1.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="../css/estilo.css">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300&display=swap"
         rel="stylesheet">
 
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/estilo.css">
     <!-- FONT AWESOME -->
     <script src="https://kit.fontawesome.com/b6fac626c2.js" crossorigin="anonymous"></script>
 
 </head>
 
-<body class="gridcon">
+<body class="container-fluid hola">
 
-
-    <div class="contenedorlogo">
-        <img class="logo" src="../imagenes/Arani Ecolife.png" alt="logo">
-    </div>
-
-    <div class="ingresar">
-        <a class="crearcuenta" href="#crearcuenta">Crear Cuenta |</a>
-        <a href="#Inciarsesion"> Iniciar Sesion</a>
-    </div>
-
-    <form class="buscador">
-        <input class="bus" type="text" name="search" placeholder="Search..">
-    </form>
-
-    <nav class="menu1">
-        <ul class="menu">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a class="active" href="contacto.html">Contacto</a></li>
-            <li class="prod"><a href="productos.html" class="prod1">Productos</a>
-                <div class="submenu">
-                    <a href="productos.html">Linea Capilar</a>
-                    <a href="productos.html">Linea Facial</a>
-                    <a href="productos.html">Linea Corporal</a>
-                    <a href="productos.html">Productos Varios</a>
-                    <a href="productos.html">Combos</a>
-                </div>
-
-            </li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="quienessomos.html">Quienes somos</a></li>
-        </ul>
+    <nav class="ingreso500px navbar navbar-light" style="background-color: #c6d8a9;">
+        <div class="container-fluid">
+            <img class="logo" src="../imagenes/Arani Ecolife.png" alt="logo">
+            <div class="h5">
+                <a class="navbar-brand" href="#">Crear Cuenta |</a>
+                <a class="navbar-brand" href="#">| Iniciar Sesion</a>
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
     </nav>
 
-    <div class="volverinicio">
-        <ul>
-            <li><a href="../index.html">Inicio |</a></li>
-            <li><a href="contacto.html">| Contacto</a></li>
-        </ul>
-
-        <h2 class="qs">CONTACTO</h2>
+    <div class="solo500px verde">
+        <img class=" logo" src="../imagenes/Arani Ecolife.png" alt="logo">
+    </div>
+    <div class="solo500px h5">
+        <a class="navbar-brand" href="#">Crear Cuenta |</a>
+        <a class="navbar-brand" href="#">| Iniciar Sesion</a>
+        <a class="navbar-brand" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
     </div>
 
-    <div class="contact-form">
+ <nav class="row navbar navbar-expand-lg navbar-light navmenu" style="background-color: white;">
+        <div class="container-fluid">
+            <a class="menuoff navbar-brand" href="#">MENU</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+
+                <ul class="col-9 navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contacto.html">Contactos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="productos.html" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="productos.html">Linea Facial</a></li>
+                            <li><a class="dropdown-item" href="productos.html">Linea Capilar</a></li>
+                            <li><a class="dropdown-item" href="productos.html">Linea Corporal</a></li>
+                            <li><a class="dropdown-item" href="productos.html">Productos varios</a></li>
+                            <li><a class="dropdown-item" href="productos.html">Combos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quienessomos.html">Quienes Somos</a>
+                    </li>
+                </ul>
+                <span class="col-3 navbar-text">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row col-12 volverinicio">
+        <nav style="--bs-breadcrumb-divider: '|';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="contacto.html">Contacto</a></li>
+            </ol>
+            <h3 class="qs">CONTACTO</h3>
+        </nav>
+       
+    </div>
+<div class="formulario">
+    <div class=" contact-form">
         <form>
             <p>
                 <label>Nombre</label>
@@ -101,67 +142,95 @@
         </p>
         <p>Arani.com</p>
     </div>
+</div>
+ <!-- TIPO BANNER -->
+ <div class="row banner">
+    <div class=" ban1">
+        <h6 class="banner1">RETIRO SIN COSTO</h6>
+        <p>Ciudadela, Villa Real</p>
+    </div>
 
-    <!-- TIPO BANNER -->
-    <div class="banner">
-        <div class="ban1">
-            <h4 class="banner1">RETIRO SIN COSTO</h4>
-            <p>Ciudadela, Villa Real</p>
-        </div>
+    <div class=" ban2">
+        <h6 class="banner2">REVENDE CONSCIENTE</h6>
+        <p>Link para solicitar tu catalogo mayorista sin compromiso</p>
+    </div>
 
-        <div class="ban2">
-            <h4 class="banner2">REVENDE CONSCIENTE</h4>
-            <p>Link para solicitar tu catalogo mayorista sin compromiso</p>
-        </div>
+    <div class=" ban3">
+        <h6 class="banner3">ENVIOS A TODO EL PAIS</h6>
+        <p>Calcula el costo de envio ACA</p>
+    </div>
+</div>
 
-        <div class="ban3">
-            <h4 class="banner3">ENVIOS A TODO EL PAIS</h4>
-            <p>Calcula el costo de envio ACA</p>
-        </div>
+<footer class="footer">
+
+    <!-- NUEVO FOOTER -->
+
+    <div class="container-redes">
+        <section class="botones">
+            <a href="#" class="fa-brands fa-instagram"></a>
+            <a href="#" class="fa-brands fa-facebook-f"></a>
+            <a href="#" class="fa-brands fa-tiktok"></a>
+            <a href="#" class="fa-solid fa-envelope"></a>
+            <a href="#" class="fa-brands fa-whatsapp"></a>
+        </section>
     </div>
 
 
+    <div class="container-body">
 
-    <footer class="footer">
-
-        <div>
-            <div class="redes">
-                <div>
-                    <h4>Seguinos</h4>
-                    <a class="insta" href="https://www.instagram.com/arani.ecolife/?hl=es"><i
-                            class="fa-brands fa-instagram"></i></a>
-                    <a class="face" href="https://www.facebook.com"><i class="fa-brands fa-facebook-square"></i></a>
-                    <!-- Mas adelante linkeo facebook -->
-
-                </div>
-                <div>
-                    <h4>Contactanos</h4>
-                    <a href="https:/whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
-                    <!-- Mas adelante linkeo wsp -->
-                    <a href="https://google.com"><i class="fa-solid fa-envelope"></i></a>
-                    <!-- Mas adelante linkeo mail -->
-                </div>
-                <div>
-                    <h4>Informacion</h4>
-                    <a href="pagina/faq.html"><i class="fa-solid fa-circle-info"></i></a>
-                </div>
-            </div>
-
-            <nav id="menufooter">
-                <ul class="menu">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a class="active" href="contacto.html">Contacto</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="quienessomos.html">Quienes somos</a></li>
-
-                </ul>
-            </nav>
+        <div class="columna1">
+            <h1>Mas informacion</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos cumque, ea, perspiciatis voluptates
+                est,
+                fuga minus ipsum a vitae molestiae facilis. Quisquam atque perspiciatis ratione consectetur alias
+                dolor
+                minus fugit.</p>
+        </div>
+        <div class="columna2">
+            <h1>Mas informacion2</h1>
+            <p>direccion</p>
+            <p>web</p>
+            <p>telefono</p>
+        </div>
+        <div class="columna3">
+            <h1>newsletter</h1>
+            <p>aca poner un input</p>
         </div>
 
-        <p>parrafo sobre derechos reservados</p>
+    </div>
 
-    </footer>
+    <ul class="navfooter nav justify-content-center navbar-light" style="background-color: white;">
+        <li class="nav-item">
+            <a class="nav-link"  href="../index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="contacto.html">Contactos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="productos.html">Productos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="quienessomos.html">Quienes Somos</a>
+        </li>
+    </ul>
+
+    <div class="container-footer">
+        <p>2022 Hecho por Aldana Ranieri</p>
+    </div>
+
+</footer>
+
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
