@@ -93,7 +93,7 @@ a{
    justify-content: center;
    align-items: center;
 }
-.banner div p,h4{
+.banner div p, .banner div h6{
    margin: 2% 12%;
    padding: 0%;
    display: flex;
@@ -102,11 +102,9 @@ a{
 .ban1{
    border-right: 0.5px solid black;
 }
-
 .ban3{
    border-left: 0.5px solid black;
 }
-
 .logo{
    height: 105px;
    width: auto;
@@ -119,7 +117,6 @@ a{
    display: flex;
    justify-content: flex-end;
 }
-
 .categoriasprincipales{
    color: #38491b;
    display: flex;
@@ -128,7 +125,10 @@ a{
    padding: 20px;
 }
 /*---------footer nuevo---------*/
-
+.footer{
+   background-color: #38491b;
+  color: #c6d8a9;
+}
  .container-redes{
     background-color: #38491b;
     display: flex;
@@ -140,9 +140,9 @@ a{
   display: flex;
   justify-content: space-around;
   align-items: center;
- height: 80px;
+ height: 100px;
  }
- .botones a{
+.botones a{
    text-decoration: none;
    font-size: 28px;
    width: 50px;
@@ -151,38 +151,48 @@ a{
    text-align: center;
    background-color: #c6d8a9;
    color: #38491b;
-   }
- .container-body{
+   transition: .2s;
+}
+.botones a:hover{
+   transform: translateY(-3px) scale(1.05);
+   box-shadow: 0 5px 5px 0px rgba(0 0 0 .4);
+   background-color: #212c0d;
+   color: #c6d8a9;
+}
+#container-redes-inicio section{
+   min-width: 300px;
+   height: 25px;
+}
+#container-redes-inicio section a{
+   font-size: 15px;
+   width: 0;
+   height: 0;
+   line-height: 0;
+   color: #c6d8a9;
+}
+.container-body{
     width: 100%;
     margin: auto;
     padding: 20px;
     display: flex;
     justify-content: space-around;
- }
- .columna1{
+}
+ .columna1, .columna2, .columna3{
     max-width: 400px;
  }
- .columna1 h1{
+ .columna1 h1, .columna2 h1, .columna3 h1{
     font-size: 22px;
  }
  .columna1 p{
     font-size: 14px;
  }
- .columna2{
-    max-width: 400px;
- }
- .columna2 h1{
-    font-size: 22px;
- }
  .columna2 p{
     font-size: 14px;
+    margin-top: 5px;
  }
- .columna3{
-    max-width: 400px;
- }
- .columna3 h1{
-    font-size: 22px;
- }
+ .columna2 p i{
+   margin-right: 7px;
+}
  .columna3 p{
     font-size: 14px;
  }
@@ -191,13 +201,20 @@ a{
     background-color: black;
     color: #fff;
     text-align: center;
-    padding: 5px 50px 0% 0%;
+    padding: 5px; 
     font-size: 13px;
  }
+ .container-footer p{
+   margin: 0%;
+   padding: 0%;
+}
  .navfooter li a {
     text-decoration: none;
     color: grey;
  }
+ .navfooter li a:hover {
+   color: black;
+}
  .navfooter{
     background-color: beige;
  }
@@ -292,10 +309,23 @@ a{
 }
 
 /*------------------------QUIENES SOMOS -----------------------*/
-
-.volverinicio nav ol,h3{
+@keyframes aparecer{
+   0% {opacity: 100%;}
+   15% {opacity: 75%;}
+   30% {opacity: 50%;}
+   45% {opacity: 25%;}
+   60% {opacity: 0%;}
+   70% {opacity: 25%;}
+   80% {opacity: 50%;}
+   90% {opacity: 75%;}
+   100% {opacity: 100%;}
+ }
+.volverinicio nav ol, h3{
    display: flex;
    justify-content: center;
+   color: #38491b;
+}
+.volverinicio nav ol li a{
    color: #38491b;
 }
  .volverinicio nav {
@@ -312,15 +342,28 @@ a{
 .foto1{
   float: right;
   margin:10px;
+  animation-name: aparecer;
+  animation-delay: 5s;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 .foto2{
   float: left;
   margin:10px;
+  animation-name: aparecer;
+  animation-delay: 5s;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 .tex2{
   grid-area: tex2;
   padding: 0 50px;
 }
+
+
+
 
 /*------------media queris*-------------*/
 @media screen and (max-width: 768px){
@@ -375,8 +418,20 @@ a{
 }
 
 /*------------------------faq -----------------------*/
-
-
+.preg{
+  margin: 0% 10%; 
+}
+.accordion-button:not(.collapsed) {
+  /* color: #38491b;
+   background-color: #dff3bf;*/
+   color: white;
+   background-color: #38491b;
+}
+.accordion-button:focus {
+   border-color: #38491b;
+   /*box-shadow: 0 0 0 0.25rem rgba(99, 151, 107, 0.705);*/
+   box-shadow: 0 0 0 0.25rem rgba(39, 87, 39, 0.705);
+}
 /*------------------------Contactos -----------------------*/
 .formulario{
   margin: 0;
