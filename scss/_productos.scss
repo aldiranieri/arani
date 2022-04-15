@@ -1,0 +1,14 @@
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    div {
+        margin: 1%;
+
+        img {
+            height: 20rem;
+            width: 15rem;
+        }
+    }
+}

@@ -1,0 +1,113 @@
+@keyframes aparecer {
+   0% {
+      opacity: 100%;
+   }
+
+   15% {
+      opacity: 75%;
+   }
+
+   30% {
+      opacity: 50%;
+   }
+
+   45% {
+      opacity: 25%;
+   }
+
+   60% {
+      opacity: 0%;
+   }
+
+   70% {
+      opacity: 25%;
+   }
+
+   80% {
+      opacity: 50%;
+   }
+
+   90% {
+      opacity: 75%;
+   }
+
+   100% {
+      opacity: 100%;
+   }
+}
+
+.volverinicio nav {
+   margin: 2%;
+   ol,
+   h3 {
+      display: flex;
+      justify-content: center;
+      color: $color1;
+      li a {
+         color: $color1;
+      }
+   }
+}
+.qs {
+   margin: 0%;
+   padding: 0%;
+}
+.quienessomos,
+.tex2 {
+   padding: 0 50px;
+}
+.foto1 {
+   float: right;
+}
+.foto2 {
+   float: left;
+}
+.foto1,
+.foto2 {
+   margin: 10px;
+   animation-name: aparecer;
+   animation-delay: 5s;
+   animation-duration: 5s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+}
+
+/*------------media queris*-------------*/
+@media screen and (max-width: 768px) {
+   .qs {
+      font-size: 18px;
+   }
+   .quienessomos,
+   .tex2 {
+      font-size: 13px;
+   }
+   .foto1,
+   .foto2 {
+      width: 35%;
+      height: 40%;
+      padding: 0%;
+   }
+}
+
+@media screen and (max-width: 500px) {
+
+   .footer {
+      font-size: 13px;
+   }
+   #menufooter {
+      display: none;
+   }
+   .qs {
+      font-size: 15px;
+   }
+   .quienessomos,
+   .tex2 {
+      font-size: 11px;
+   }
+   .foto1,
+   .foto2 {
+      width: 35%;
+      height: 35%;
+      padding: 0%;
+   }
+}

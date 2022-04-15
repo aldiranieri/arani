@@ -1,0 +1,123 @@
+.formulario {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 40rem;
+
+    grid-template-areas:
+        "consultas consultas consultas con"
+}
+
+.contact-info {
+    grid-area: con;
+    background: $color1;
+    color: $color2;
+    margin-right: 15%;
+    margin-top: 6%;
+    padding: 10%;
+    text-align: center;
+
+    h4,
+    ul,
+    p {
+        text-align: left;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.contact-form {
+    grid-area: consultas;
+    background: #c6d8a9;
+    color: black;
+    margin-left: 7%;
+    margin-top: 2%;
+
+    form {
+        label {
+            display: block;
+        }
+
+        p {
+            margin: 0;
+            padding: 1em;
+        }
+
+        button,
+        input,
+        textarea {
+            width: 100%;
+            padding: .7em;
+            border: none;
+            background: none;
+            outline: 0;
+            color: #fff;
+            border-bottom: 1px solid $color1;
+        }
+
+        button {
+            background: $color1;
+            border: 0;
+            padding: 1em;
+
+            &:hover,
+            &:focus {
+                background: #000000;
+                color: rgb(182, 175, 175);
+                transition: background-color 1s ease-out;
+                outline: 0;
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .formulario {
+        display: flex;
+        margin: 0%;
+        padding: 0%;
+        flex-wrap: wrap;
+    }
+
+    .contact-info {
+        margin: 0% 5%;
+        padding: 3%;
+        h4 {
+            padding: 0% 0% 0% 140px;
+        }
+        h4,
+        ul,
+        p {
+            text-align: center;
+            margin: 0 0 1rem 0;
+        }
+    }
+    .contact-form {
+        margin: 0% 5%;
+        padding: 0%;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .contact-info {
+        font-size: 14px;
+        h4 {
+            padding: 0%;
+        }
+    }
+
+    .volverinicio {
+        margin: 0% 0% 2% 0%;
+    }
+
+}
