@@ -361,10 +361,6 @@ a{
   grid-area: tex2;
   padding: 0 50px;
 }
-
-
-
-
 /*------------media queris*-------------*/
 @media screen and (max-width: 768px){
   .qs{
@@ -422,14 +418,11 @@ a{
   margin: 0% 10%; 
 }
 .accordion-button:not(.collapsed) {
-  /* color: #38491b;
-   background-color: #dff3bf;*/
    color: white;
    background-color: #38491b;
 }
 .accordion-button:focus {
    border-color: #38491b;
-   /*box-shadow: 0 0 0 0.25rem rgba(99, 151, 107, 0.705);*/
    box-shadow: 0 0 0 0.25rem rgba(39, 87, 39, 0.705);
 }
 /*------------------------Contactos -----------------------*/

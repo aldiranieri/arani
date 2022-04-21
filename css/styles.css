@@ -270,6 +270,7 @@
       height: 20rem;
       width: 15rem; }
 
+/*MIXIN*/
 * {
   padding: 0%;
   margin: 0%; }
@@ -302,10 +303,12 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap;
-  align-content: center; }
-  .lineas:hover {
-    transform: scale(1.15); }
+  align-content: center;
+  /*display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-content: center;*/
+  flex-wrap: wrap; }
   .lineas a {
     font-weight: bolder;
     color: #38491b;
@@ -316,37 +319,69 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    .lineas a:hover {
+      transform: scale(1.15); }
 
-.LineaCapilar {
-  background-image: linear-gradient(rgba(241, 234, 234, 0.363), rgba(255, 255, 255, 0.2)), url("../imagenes/capilar.jpg");
+/*EXTEND*/
+.fondo, .LineaCapilar, .LineaFacial, .LineaCorporal, .LineaProductosVarios, .LineaCombos {
+  background-image: linear-gradient(rgba(241, 234, 234, 0.363), rgba(255, 255, 255, 0.2));
   background-size: cover;
   background-repeat: no-repeat; }
+
+/*MAPA*/
+.LineaCapilar {
+  background-image: url("../imagenes/capilar.jpg"); }
 
 .LineaFacial {
-  background-image: linear-gradient(rgba(241, 234, 234, 0.363), rgba(255, 255, 255, 0.2)), url("../imagenes/facial.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; }
+  background-image: url("../imagenes/facial.jpg"); }
 
 .LineaCorporal {
-  background-image: linear-gradient(rgba(241, 234, 234, 0.363), rgba(255, 255, 255, 0.2)), url("../imagenes/corporal.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; }
+  background-image: url("../imagenes/corporal.jpg"); }
+
+.LineaProductosVarios {
+  background-image: url("../imagenes/varios.jpg"); }
+
+.LineaCombos {
+  background-image: url("../imagenes/kit.jpg"); }
+
+/*.LineaCapilar {
+   background-image: linear-gradient(rgba(241, 234, 234, 0.363), rgba(255, 255, 255, 0.2)), url('../imagenes/capilar.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.LineaFacial {
+   background-image: linear-gradient(rgba(241, 234, 234, 0.363), rgba(255, 255, 255, 0.2)), url('../imagenes/facial.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.LineaCorporal {
+   background-image: linear-gradient(rgba(241, 234, 234, 0.363), rgba(255, 255, 255, 0.2)), url('../imagenes/corporal.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+}
 
 .ProductosVarios {
-  background-image: linear-gradient(rgba(241, 234, 234, 0.363), rgba(255, 255, 255, 0.2)), url("../imagenes/varios.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; }
+   background-image: linear-gradient(rgba(241, 234, 234, 0.363), rgba(255, 255, 255, 0.2)), url('../imagenes/varios.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+}
 
 .combos {
-  background-image: linear-gradient(rgba(241, 234, 234, 0.363), rgba(255, 255, 255, 0.2)), url("../imagenes/kit.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
+   background-image: linear-gradient(rgba(241, 234, 234, 0.363), rgba(255, 255, 255, 0.2)), url('../imagenes/kit.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+}*/
 .banner {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: center;
+  /*display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-content: center;*/
   flex-wrap: wrap;
   margin: 4% 0%; }
   .banner div {
@@ -432,8 +467,12 @@ a {
     display: none; }
   .solo500px {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-content: center;
-    justify-content: center; }
+    /*display: flex;
+      align-content: center;
+      justify-content: center;*/ }
   .verde {
     background-color: #c6d8a9; }
   .logo {
