@@ -1,41 +1,3 @@
-@keyframes aparecer {
-   0% {
-      opacity: 100%;
-   }
-
-   15% {
-      opacity: 75%;
-   }
-
-   30% {
-      opacity: 50%;
-   }
-
-   45% {
-      opacity: 25%;
-   }
-
-   60% {
-      opacity: 0%;
-   }
-
-   70% {
-      opacity: 25%;
-   }
-
-   80% {
-      opacity: 50%;
-   }
-
-   90% {
-      opacity: 75%;
-   }
-
-   100% {
-      opacity: 100%;
-   }
-}
-
 .volverinicio nav {
    margin: 2%;
    ol,
@@ -65,11 +27,6 @@
 .foto1,
 .foto2 {
    margin: 10px;
-   animation-name: aparecer;
-   animation-delay: 5s;
-   animation-duration: 5s;
-   animation-iteration-count: infinite;
-   animation-timing-function: linear;
 }
 
 /*------------media queris*-------------*/

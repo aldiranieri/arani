@@ -12,3 +12,23 @@
         }
     }
 }
+
+.cantidad{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.btn-outline-success {
+    color: $color2;
+    border-color: $color2;
+}
+#bot{
+    background-color: white;
+    &:hover {
+        background-color: beige;
+     }
+    i, a i {
+        color:$color1;
+    }
+}

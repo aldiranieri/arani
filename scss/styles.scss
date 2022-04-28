@@ -42,19 +42,22 @@ a {
    width: 100%;
    justify-content: center;
    margin: 0% 0% 2% 0%;
+
 }
 
 .car {
    margin: 0%;
    padding: 0%;
 }
+.form-control {
+   &:focus {
+      border-color: $color2;
+      box-shadow: 0 0 0 0.25rem $color2;
+  }
+}
 
 .lineas {
    @include content(flex, row, center, center);
-   /*display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-content: center;*/
    flex-wrap: wrap;
 
    a {
@@ -72,14 +75,17 @@ a {
       }
    }
 }
+
+$estilos: (
+  colorfondo: linear-gradient(rgba(190, 190, 190, 0.35), rgba(190, 190, 190, 0.35)),
+);
+
 /*EXTEND*/
 .fondo {
-   background-image: linear-gradient(rgba(241, 234, 234, 0.363), rgba(255, 255, 255, 0.2));
    background-size: cover;
    background-repeat: no-repeat;
 }
 /*MAPA*/
-
 $lineas:(
    Capilar: url('../imagenes/capilar.jpg'),
    Facial: url('../imagenes/facial.jpg'),
@@ -91,45 +97,11 @@ $lineas:(
 @each $linea, $backgrund in $lineas{
    .Linea#{$linea} {
       @extend .fondo;
-      background-image: $backgrund;}
+      background-image: map-get($estilos, colorfondo), $backgrund;}
 }
-
-/*.LineaCapilar {
-   background-image: linear-gradient(rgba(241, 234, 234, 0.363), rgba(255, 255, 255, 0.2)), url('../imagenes/capilar.jpg');
-   background-size: cover;
-   background-repeat: no-repeat;
-}
-
-.LineaFacial {
-   background-image: linear-gradient(rgba(241, 234, 234, 0.363), rgba(255, 255, 255, 0.2)), url('../imagenes/facial.jpg');
-   background-size: cover;
-   background-repeat: no-repeat;
-}
-
-.LineaCorporal {
-   background-image: linear-gradient(rgba(241, 234, 234, 0.363), rgba(255, 255, 255, 0.2)), url('../imagenes/corporal.jpg');
-   background-size: cover;
-   background-repeat: no-repeat;
-}
-
-.ProductosVarios {
-   background-image: linear-gradient(rgba(241, 234, 234, 0.363), rgba(255, 255, 255, 0.2)), url('../imagenes/varios.jpg');
-   background-size: cover;
-   background-repeat: no-repeat;
-}
-
-.combos {
-   background-image: linear-gradient(rgba(241, 234, 234, 0.363), rgba(255, 255, 255, 0.2)), url('../imagenes/kit.jpg');
-   background-size: cover;
-   background-repeat: no-repeat;
-}*/
 
 .banner {
    @include content(flex, row, center, center);
-   /*display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-content: center;*/
    flex-wrap: wrap;
    margin: 4% 0%;
 
@@ -149,6 +121,9 @@ $lineas:(
          padding: 0%;
          display: flex;
          justify-items: center;
+         a{
+            color: black;
+         }
       }
    }
 }
@@ -181,8 +156,10 @@ $lineas:(
    display: flex;
    align-items: center;
    justify-content: center;
-   padding: 20px;
+   padding: 12px;
+   border-bottom: 0.4px solid rgba(236, 236, 236, 0.900);
 }
+
 
 .solo500px {
    display: none;
@@ -195,8 +172,6 @@ $lineas:(
 .navmenu {
    padding: 0% 2%;
 }
-
-/*no se si esta en algun lado*/
 
 /*------------media queris*-------------*/
 @media screen and (max-width: 768px) {
@@ -248,9 +223,7 @@ $lineas:(
 
    .solo500px {
       @include content(flex, row, center, center);
-      /*display: flex;
-      align-content: center;
-      justify-content: center;*/
+
    }
 
    .verde {
