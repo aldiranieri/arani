@@ -398,7 +398,8 @@ a {
   display: none; }
 
 .navmenu {
-  padding: 0% 2%; }
+  padding: 0% 2%;
+  margin: 5px 0%; }
 
 /*------------media queris*-------------*/
 @media screen and (max-width: 768px) {
