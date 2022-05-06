@@ -7,8 +7,8 @@
         margin: 1%;
 
         img {
-            height: 20rem;
-            width: 15rem;
+            height: 15rem;
+            width: 11.25rem;
         }
     }
 }
@@ -32,3 +32,38 @@
         color:$color1;
     }
 }
+.card-body {
+    flex: 1 1 auto;
+    padding: 0rem 0rem;
+}
+.card {
+    border: none
+}
+
+.encabezado-img{
+    
+    height: 100px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+.imagenfacial{
+    background-image: url(../imagenes/fin1.jpg);
+}
+.imagencapilar{
+    background-image: url(../imagenes/fin6.jpg);
+}
+.imagencorporal{
+    background-image: url(../imagenes/fin4.jpg);
+}
+.imagenvarios{
+    background-image: url(../imagenes/fin5.jpg);
+}
+.imagencombos{
+    background-image: url(../imagenes/img7.jpg);
+}
+

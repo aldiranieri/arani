@@ -1,70 +1,144 @@
 .volverinicio nav {
-   margin: 2%;
+   margin: 2% 0%;
+
    ol,
    h3 {
-      display: flex;
-      justify-content: center;
-      color: $color1;
-      li a {
-         color: $color1;
-      }
+       display: flex;
+       justify-content: center;
+       color: $color1;
+
+       li a {
+           color: $color1;
+       }
    }
 }
+
 .qs {
    margin: 0%;
    padding: 0%;
 }
-.quienessomos,
-.tex2 {
-   padding: 0 50px;
-}
-.foto1 {
-   float: right;
-}
-.foto2 {
-   float: left;
-}
-.foto1,
-.foto2 {
-   margin: 10px;
+
+.tex {
+   background-color: $color1;
+   color: white;
+   width: 80%;
+   height: 350px;
+   margin: 0% 6%;
+
+   p {
+       margin: 0;
+       padding: 15px 10px 10px 0px;
+   }
+
+   .p1 {
+       font-size: larger;
+       font-weight: bold;
+   }
+
+   .foto2 {
+       float: left;
+       margin: 0px;
+       padding: 0px;
+       height: 100%;
+       width: auto;
+   }
+
+   .fotodiv {
+       display: none;
+   }
+
 }
 
+
+
 /*------------media queris*-------------*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1141px) {
+
+   .tex {
+       font-size: 15px;
+
+       p {
+           margin: 0;
+           padding: 10px 8px 5px 0px;
+       }
+   }
+}
+
+@media screen and (max-width: 900px) {
    .qs {
-      font-size: 18px;
+       font-size: 18px;
    }
-   .quienessomos,
-   .tex2 {
-      font-size: 13px;
+
+   .tex {
+
+       font-size: 13px;
+
+       div {
+
+           .p3,
+           .p4 {
+               display: none;
+           }
+
+           p {
+               margin: 0;
+               padding: 10px 8px 5px 0px;
+           }
+       }
+
    }
-   .foto1,
+}
+
+@media screen and (max-width: 751px) {
+
    .foto2 {
-      width: 35%;
-      height: 40%;
-      padding: 0%;
+       display: none;
    }
+
+   .tex {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-content: center;
+       flex-wrap: nowrap;
+       margin: 2rem 10%;
+       padding: 0%;
+       height: fit-content;
+
+       .div1 {
+           height: fit-content;
+           display: block;
+
+           p {
+               margin: 0;
+               padding: 15px 40px 10px 40px
+           }
+       }
+
+       .fotodiv {
+           display: block;
+           margin: 0px;
+           padding: 0px;
+           height: auto;
+           width: 100%;
+
+       }
+   }
+
 }
 
 @media screen and (max-width: 500px) {
 
    .footer {
-      font-size: 13px;
+       font-size: 13px;
    }
+
    #menufooter {
-      display: none;
+       display: none;
    }
+
    .qs {
-      font-size: 15px;
+       font-size: 15px;
    }
-   .quienessomos,
-   .tex2 {
-      font-size: 11px;
-   }
-   .foto1,
-   .foto2 {
-      width: 35%;
-      height: 35%;
-      padding: 0%;
-   }
+
 }

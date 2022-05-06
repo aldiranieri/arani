@@ -82,7 +82,7 @@
       color: black; }
 
 .volverinicio nav {
-  margin: 2%; }
+  margin: 2% 0%; }
   .volverinicio nav ol,
   .volverinicio nav h3 {
     display: flex;
@@ -96,32 +96,71 @@
   margin: 0%;
   padding: 0%; }
 
-.quienessomos,
-.tex2 {
-  padding: 0 50px; }
-
-.foto1 {
-  float: right; }
-
-.foto2 {
-  float: left; }
-
-.foto1,
-.foto2 {
-  margin: 10px; }
+.tex {
+  background-color: #38491b;
+  color: white;
+  width: 80%;
+  height: 350px;
+  margin: 0% 6%; }
+  .tex p {
+    margin: 0;
+    padding: 15px 10px 10px 0px; }
+  .tex .p1 {
+    font-size: larger;
+    font-weight: bold; }
+  .tex .foto2 {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: auto; }
+  .tex .fotodiv {
+    display: none; }
 
 /*------------media queris*-------------*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1141px) {
+  .tex {
+    font-size: 15px; }
+    .tex p {
+      margin: 0;
+      padding: 10px 8px 5px 0px; } }
+
+@media screen and (max-width: 900px) {
   .qs {
     font-size: 18px; }
-  .quienessomos,
-  .tex2 {
+  .tex {
     font-size: 13px; }
-  .foto1,
+    .tex div .p3,
+    .tex div .p4 {
+      display: none; }
+    .tex div p {
+      margin: 0;
+      padding: 10px 8px 5px 0px; } }
+
+@media screen and (max-width: 751px) {
   .foto2 {
-    width: 35%;
-    height: 40%;
-    padding: 0%; } }
+    display: none; }
+  .tex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    margin: 2rem 10%;
+    padding: 0%;
+    height: fit-content; }
+    .tex .div1 {
+      height: fit-content;
+      display: block; }
+      .tex .div1 p {
+        margin: 0;
+        padding: 15px 40px 10px 40px; }
+    .tex .fotodiv {
+      display: block;
+      margin: 0px;
+      padding: 0px;
+      height: auto;
+      width: 100%; } }
 
 @media screen and (max-width: 500px) {
   .footer {
@@ -129,23 +168,15 @@
   #menufooter {
     display: none; }
   .qs {
-    font-size: 15px; }
-  .quienessomos,
-  .tex2 {
-    font-size: 11px; }
-  .foto1,
-  .foto2 {
-    width: 35%;
-    height: 35%;
-    padding: 0%; } }
+    font-size: 15px; } }
 
 .formulario {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 0.5fr;
   grid-template-rows: 40rem;
-  grid-template-areas: "consultas consultas consultas con"; }
+  grid-template-areas: "consultas consultas con con"; }
 
 .contact-info {
   grid-area: con;
@@ -162,13 +193,17 @@
   .contact-info ul {
     list-style: none;
     padding: 0; }
+  .contact-info iframe {
+    width: 100%;
+    height: 50%; }
 
 .contact-form {
   grid-area: consultas;
-  background: #c6d8a9;
+  background: #f5ffe6;
   color: black;
-  margin-left: 7%;
-  margin-top: 2%; }
+  margin-left: 12%;
+  margin-top: 4.5%;
+  border: 1px solid #38491b; }
   .contact-form form label {
     display: block; }
   .contact-form form p {
@@ -182,12 +217,13 @@
     border: none;
     background: none;
     outline: 0;
-    color: #fff;
+    color: #38491b;
     border-bottom: 1px solid #38491b; }
   .contact-form form button {
     background: #38491b;
     border: 0;
-    padding: 1em; }
+    padding: 1em;
+    color: #c6d8a9; }
     .contact-form form button:hover, .contact-form form button:focus {
       background: #000000;
       color: #b6afaf;
@@ -204,12 +240,14 @@
     margin: 0% 5%;
     padding: 3%; }
     .contact-info h4 {
-      padding: 0% 0% 0% 140px; }
+      padding: 0%; }
     .contact-info h4,
     .contact-info ul,
     .contact-info p {
       text-align: center;
       margin: 0 0 1rem 0; }
+    .contact-info iframe {
+      height: 43%; }
   .contact-form {
     margin: 0% 5%;
     padding: 0%;
@@ -221,7 +259,9 @@
     .contact-info h4 {
       padding: 0%; }
   .volverinicio {
-    margin: 0% 0% 2% 0%; } }
+    margin: 0% 0% 2% 0%; }
+  .contact-info iframe {
+    height: 37%; } }
 
 .preg {
   margin: 0% 10%; }
@@ -247,8 +287,8 @@
   .catalogo div {
     margin: 1%; }
     .catalogo div img {
-      height: 20rem;
-      width: 15rem; }
+      height: 15rem;
+      width: 11.25rem; }
 
 .cantidad {
   display: flex;
@@ -266,10 +306,44 @@
   #bot i, #bot a i {
     color: #38491b; }
 
+.card-body {
+  flex: 1 1 auto;
+  padding: 0rem 0rem; }
+
+.card {
+  border: none; }
+
+.encabezado-img {
+  height: 100px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; }
+
+.imagenfacial {
+  background-image: url(../imagenes/fin1.jpg); }
+
+.imagencapilar {
+  background-image: url(../imagenes/fin6.jpg); }
+
+.imagencorporal {
+  background-image: url(../imagenes/fin4.jpg); }
+
+.imagenvarios {
+  background-image: url(../imagenes/fin5.jpg); }
+
+.imagencombos {
+  background-image: url(../imagenes/img7.jpg); }
+
+.row {
+  --bs-gutter-x: 0rem; }
+
 /*MIXIN*/
 * {
-  padding: 0%;
-  margin: 0%; }
+  margin: 0%;
+  padding: 0%; }
 
 #body {
   font-family: 'Rubik', sans-serif; }
@@ -298,46 +372,6 @@ a {
 .form-control:focus {
   border-color: #c6d8a9;
   box-shadow: 0 0 0 0.25rem #c6d8a9; }
-
-.lineas {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap; }
-  .lineas a {
-    font-weight: bolder;
-    color: #38491b;
-    height: 150px;
-    width: 220px;
-    margin: 10px 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    .lineas a:hover {
-      transform: scale(1.15); }
-
-/*EXTEND*/
-.fondo, .LineaCapilar, .LineaFacial, .LineaCorporal, .LineaProductosVarios, .LineaCombos {
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-/*MAPA*/
-.LineaCapilar {
-  background-image: linear-gradient(rgba(190, 190, 190, 0.35), rgba(190, 190, 190, 0.35)), url("../imagenes/capilar.jpg"); }
-
-.LineaFacial {
-  background-image: linear-gradient(rgba(190, 190, 190, 0.35), rgba(190, 190, 190, 0.35)), url("../imagenes/facial.jpg"); }
-
-.LineaCorporal {
-  background-image: linear-gradient(rgba(190, 190, 190, 0.35), rgba(190, 190, 190, 0.35)), url("../imagenes/corporal.jpg"); }
-
-.LineaProductosVarios {
-  background-image: linear-gradient(rgba(190, 190, 190, 0.35), rgba(190, 190, 190, 0.35)), url("../imagenes/varios.jpg"); }
-
-.LineaCombos {
-  background-image: linear-gradient(rgba(190, 190, 190, 0.35), rgba(190, 190, 190, 0.35)), url("../imagenes/kit.jpg"); }
 
 .banner {
   display: flex;
@@ -398,8 +432,31 @@ a {
   display: none; }
 
 .navmenu {
-  padding: 0% 2%;
-  margin: 5px 0%; }
+  margin: 5px 0%;
+  padding: 0% 2%; }
+
+.container-fotos {
+  display: flex;
+  padding: 0px 30px;
+  flex-wrap: wrap; }
+  .container-fotos .column-fotos1 {
+    flex: 8.9%;
+    width: 100%; }
+    .container-fotos .column-fotos1 img {
+      width: 100%;
+      height: 100%;
+      padding: 5px; }
+  .container-fotos .column-fotos4 {
+    flex: 29.87%; }
+    .container-fotos .column-fotos4 img {
+      width: 100%;
+      height: 100%;
+      padding: 6px 5px; }
+  .container-fotos .column-fotos2, .container-fotos .column-fotos3 {
+    flex: 30.58%; }
+    .container-fotos .column-fotos2 img, .container-fotos .column-fotos3 img {
+      width: 100%;
+      padding: 6px 5px; }
 
 /*------------media queris*-------------*/
 @media screen and (max-width: 768px) {
@@ -407,7 +464,7 @@ a {
     font-size: 14px;
     height: 4rem;
     width: 250px;
-    margin: 3px;
+    margin: 13x;
     padding: 2px; }
   .container-redes {
     display: flex;
@@ -415,7 +472,7 @@ a {
     justify-items: center;
     flex-wrap: wrap;
     margin: 0%;
-    padding: 0; }
+    padding: 0%; }
   .container-body {
     flex-wrap: wrap; }
   .columna1 {
@@ -439,10 +496,10 @@ a {
   .verde {
     background-color: #c6d8a9; }
   .logo {
-    padding: 0%;
-    margin: 0%; }
+    margin: 0%;
+    padding: 0%; }
   .banner {
-    font-size: 12px; }
+    font-size: 14px; }
     .banner div {
       height: 1rem;
       width: 110px;
@@ -460,4 +517,12 @@ a {
       font-size: 20px;
       width: 42px;
       height: 42px;
-      line-height: 42px; } }
+      line-height: 42px; }
+  .container-fotos .column-fotos1 {
+    flex: 22.68%; }
+  .container-fotos .column-fotos4 {
+    flex: 49.41%; }
+  .container-fotos .column-fotos2 {
+    flex: 77.32%; }
+  .container-fotos .column-fotos3 {
+    flex: 50.59%; } }

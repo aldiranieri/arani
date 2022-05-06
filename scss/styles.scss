@@ -5,6 +5,10 @@
 @import "faq";
 @import "productos";
 
+.row {
+    --bs-gutter-x: 0rem;
+}
+
 /*MIXIN*/
 
 @mixin content($display, $flex-direction, $justify-content, $align-content)
@@ -14,9 +18,13 @@
    align-content: $align-content
   
 }
+
+@mixin borders($margin, $padding)
+{  margin: $margin;
+   padding: $padding; 
+}
 * {
-   padding: 0%;
-   margin: 0%;
+   @include borders(0%, 0%);
 }
 
 #body {
@@ -34,8 +42,7 @@ a {
 }
 
 .hola {
-   margin: 0%;
-   padding: 0%;
+   @include borders(0%, 0%)
 }
 
 .carrusel {
@@ -46,58 +53,13 @@ a {
 }
 
 .car {
-   margin: 0%;
-   padding: 0%;
+   @include borders(0%, 0%)
 }
 .form-control {
    &:focus {
       border-color: $color2;
       box-shadow: 0 0 0 0.25rem $color2;
   }
-}
-
-.lineas {
-   @include content(flex, row, center, center);
-   flex-wrap: wrap;
-
-   a {
-      font-weight: bolder;
-      color: $color1;
-      height: 150px;
-      width: 220px;
-      margin: 10px 15px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      &:hover {
-         transform: scale(1.15);
-      }
-   }
-}
-
-$estilos: (
-  colorfondo: linear-gradient(rgba(190, 190, 190, 0.35), rgba(190, 190, 190, 0.35)),
-);
-
-/*EXTEND*/
-.fondo {
-   background-size: cover;
-   background-repeat: no-repeat;
-}
-/*MAPA*/
-$lineas:(
-   Capilar: url('../imagenes/capilar.jpg'),
-   Facial: url('../imagenes/facial.jpg'),
-   Corporal: url('../imagenes/corporal.jpg'),
-   ProductosVarios:url('../imagenes/varios.jpg'),
-   Combos:url('../imagenes/kit.jpg'),
-
-);
-@each $linea, $backgrund in $lineas{
-   .Linea#{$linea} {
-      @extend .fondo;
-      background-image: map-get($estilos, colorfondo), $backgrund;}
 }
 
 .banner {
@@ -108,8 +70,7 @@ $lineas:(
    div {
       height: 6rem;
       width: 300px;
-      margin: 5px;
-      padding: 2px;
+      @include borders(5px, 2px);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -117,8 +78,7 @@ $lineas:(
 
       p,
       h6 {
-         margin: 2% 12%;
-         padding: 0%;
+         @include borders(2% 12%, 0%);
          display: flex;
          justify-items: center;
          a{
@@ -170,8 +130,39 @@ $lineas:(
 }
 
 .navmenu {
-   padding: 0% 2%;
-   margin: 5px 0%;
+   @include borders(5px 0%, 0% 2%);
+}
+
+.container-fotos{
+   display: flex;
+   padding: 0px 30px;
+   flex-wrap: wrap;
+   .column-fotos1{
+      flex: 8.9%;
+      width: 100%;
+      img{
+         width: 100%;
+         height: 100%;
+         padding: 5px;
+      }
+   }
+   .column-fotos4{
+      flex: 29.87%;
+      img{
+         width: 100%;
+         height: 100%;
+         padding: 6px 5px;
+
+      }
+   }
+   .column-fotos2, .column-fotos3{
+      flex: 30.58%;
+      img{
+         width: 100%;
+         padding: 6px 5px;
+
+      }
+   }
 }
 
 /*------------media queris*-------------*/
@@ -181,8 +172,8 @@ $lineas:(
       font-size: 14px;
       height: 4rem;
       width: 250px;
-      margin: 3px;
-      padding: 2px;
+      @include borders(13x, 2px);
+
    }
 
    .container-redes {
@@ -190,8 +181,8 @@ $lineas:(
       align-items: center;
       justify-items: center;
       flex-wrap: wrap;
-      margin: 0%;
-      padding: 0;
+      @include borders(0%, 0%);
+ 
    }
 
    .container-body {
@@ -232,18 +223,16 @@ $lineas:(
    }
 
    .logo {
-      padding: 0%;
-      margin: 0%;
+      @include borders(0%, 0%);
    }
 
    .banner {
-      font-size: 12px;
+      font-size: 14px;
 
       div {
          height: 1rem;
          width: 110px;
-         margin: 1px;
-         padding: 1rem;
+         @include borders(1px, 1rem);
          text-align: center;
 
          h6 {
@@ -267,5 +256,24 @@ $lineas:(
          line-height: 42px;
       }
    }
+   .container-fotos{
 
+      .column-fotos1{
+         flex: 22.68%;
+
+      }
+      .column-fotos4{
+         flex: 49.41%;
+
+      }
+      .column-fotos2{
+         flex: 77.32%;
+
+      }
+      .column-fotos3{
+         flex: 50.59%;
+
+      }
+   }
 }
+
